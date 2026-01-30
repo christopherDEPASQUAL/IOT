@@ -3,6 +3,8 @@ node_modules/
 
 # Logs
 *.log
+# Plans folder (internal use only)
+plans/
 
 # OS files
 .DS_Store
@@ -17,3 +19,12 @@ front/node_modules/
 
 # Bridge
 bridge/node_modules/
+# Editor files
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# Node modules (if any)
+node_modules/

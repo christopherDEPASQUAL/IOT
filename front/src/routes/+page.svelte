@@ -29,7 +29,8 @@
 		closed: 'Closed',
 		error: 'Error'
 	};
-
+    
+    // converti les données recu en json
 	function parseJsonMaybe(value) {
 		if (value && typeof value === 'object') return value;
 		if (typeof value !== 'string') return null;
@@ -55,11 +56,11 @@
 		const payload = parseJsonMaybe(msg.payload);
 		if (!payload || typeof payload !== 'object') return;
 
-		const nextTemp = toNumber(payload.temp ?? payload.temperature ?? payload.tempC ?? payload.temp_c);
-		const nextHum = toNumber(payload.humidity ?? payload.hum ?? payload.humPct ?? payload.humidityPct);
+		const nexttemperature = toNumber(payload.temp);
+		const nextHum = toNumber(payload.humidity);
 		const nextUnit = typeof payload.unit === 'string' ? payload.unit : unit;
 
-		if (nextTemp !== null) temperature = nextTemp;
+		if (nexttemperature !== null) temperature = nexttemperature;
 		if (nextHum !== null) humidity = nextHum;
 		if (nextUnit) unit = nextUnit;
 
@@ -104,7 +105,7 @@
 
 		const message = {
 			topic: COMMAND_TOPIC,
-			payload: { unit: nextUnit }
+			payload: { unitToggle: nextUnit }
 		};
 
 		socket.send(JSON.stringify(message));
@@ -159,7 +160,7 @@
 				</p>
 				<h1 class="font-display text-4xl leading-tight md:text-5xl">Station Meteo</h1>
 				<p class="max-w-2xl text-lg text-slate-700">
-					Temperature et humidite en temps reel via MQTT + WebSocket.
+					temperature et humidite en temperatures reel via MQTT + WebSocket.
 				</p>
 			</div>
 			<button
@@ -193,7 +194,7 @@
 
 				<div class="mt-6 grid gap-4 sm:grid-cols-3">
 					<div class="rounded-2xl border border-slate-200/70 bg-white p-4">
-						<p class="text-xs uppercase tracking-[0.2em] text-slate-400">Temperature</p>
+						<p class="text-xs uppercase tracking-[0.2em] text-slate-400">temperature</p>
 						<p class="mt-2 text-3xl font-semibold text-slate-700">
 							{formatNumber(temperature, 1)} {unit ?? 'C'}
 						</p>

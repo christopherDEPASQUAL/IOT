@@ -27,9 +27,7 @@ Le projet est divisé en trois parties principales :
 │── esp32/      # Code Arduino (.ino)
 ├── bridge/             # Script de liaison MQTT
 ├── frontend/           # Interface Web (HTML/JS)
-├── docs/
-│   ├── photos/             # Photos du montage réel
-│   └── wokwi/              # Screenshots de simulation
+├── docs/               # Ressources
 └── README.md
 ```
 

@@ -1,0 +1,5 @@
+MQTT_HOST=captain.dev0.pandor.cloud
+MQTT_PORT=1884
+MQTT_URL=mqtt://captain.dev0.pandor.cloud:1884
+MQTT_TOPIC=GP5-weather
+WS_PORT=8080

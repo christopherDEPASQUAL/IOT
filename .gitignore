@@ -1,3 +1,8 @@
+.env
+node_modules/
+
+# Logs
+*.log
 # Plans folder (internal use only)
 plans/
 
@@ -5,6 +10,15 @@ plans/
 .DS_Store
 Thumbs.db
 
+# SvelteKit / Vite
+front/.svelte-kit/
+front/.vite/
+front/build/
+front/dist/
+front/node_modules/
+
+# Bridge
+bridge/node_modules/
 # Editor files
 *.swp
 *.swo

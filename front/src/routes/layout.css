@@ -1,0 +1,33 @@
+@config "../../tailwind.config.js";
+@import "tailwindcss";
+
+:root {
+	color-scheme: light;
+	--font-body: "Space Grotesk", "Segoe UI", sans-serif;
+	--font-display: "Fraunces", "Times New Roman", serif;
+	--ink-strong: #0f172a;
+	--ink-soft: #475569;
+	--paper: #f8f3e9;
+}
+
+body {
+	min-height: 100vh;
+	font-family: var(--font-body);
+	color: var(--ink-strong);
+	background:
+		radial-gradient(1200px 600px at 10% -10%, rgba(14, 165, 233, 0.2), transparent 60%),
+		radial-gradient(900px 500px at 90% 0%, rgba(45, 212, 191, 0.18), transparent 65%),
+		radial-gradient(1000px 700px at 20% 120%, rgba(251, 146, 60, 0.2), transparent 60%),
+		var(--paper);
+}
+
+h1,
+h2,
+h3 {
+	font-family: var(--font-display);
+	letter-spacing: -0.02em;
+}
+
+.font-display {
+	font-family: var(--font-display);
+}

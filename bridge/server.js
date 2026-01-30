@@ -5,11 +5,9 @@ const WebSocket = require("ws");
 dotenv.config();
 
 // MQTT settings (use .env if available)
-const MQTT_HOST = process.env.MQTT_HOST || "captain.dev0.pandor.cloud";
-const MQTT_PORT = process.env.MQTT_PORT || "1884";
-const MQTT_URL = process.env.MQTT_URL || `mqtt://${MQTT_HOST}:${MQTT_PORT}`;
-const MQTT_TOPIC = process.env.MQTT_TOPIC || "GP5-weather";
-const WS_PORT = Number(process.env.WS_PORT || "8080");
+const MQTT_URL = process.env.MQTT_URL ;
+const MQTT_TOPIC = process.env.MQTT_TOPIC ;
+const WS_PORT = Number(process.env.WS_PORT);
 
 // Connect to MQTT broker
 const mqttClient = mqtt.connect(MQTT_URL);

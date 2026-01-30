@@ -32,7 +32,19 @@ Le projet est divisé en trois parties principales :
 ```
 
 ## Installation et Lancement
-1. Configuration Hardware (ESP32)
+
+1. Configuration du .ENV
+
+```env
+MQTT_HOST=captain.dev0.pandor.cloud
+MQTT_PORT=1884
+MQTT_URL=mqtt://captain.dev0.pandor.cloud:1884
+MQTT_TOPIC=GP5-weather/weather
+MQTT_TOPIC_CONFIG=GP5-weather/config
+WS_PORT=8080
+```
+
+2. Configuration Hardware (ESP32)
 
    Capteur : DHT22 sur Pin 16.
    Bouton : Pin 14 (Input Pullup).
@@ -44,7 +56,7 @@ Le projet est divisé en trois parties principales :
    - ArduinoJson
    - AdaFruit Unified Sensor
 
-2. Broker MQTT
+3. Broker MQTT
 
 Le projet utilise le broker suivant :
    Host : captain.dev0.pandor.cloud
@@ -53,7 +65,7 @@ Le projet utilise le broker suivant :
       Publication : `GP5-weather/weather`
       Souscription : `GP5-weather/config`
 
-3. Bridge
+4. Bridge
 
    Naviguer dans le dossier bridge/
 
@@ -61,7 +73,7 @@ Le projet utilise le broker suivant :
    Lancer la commande : `node server.js`
 
 
-4. Frontend
+5. Frontend
 
    Naviguer dans le dossier front/
 
@@ -86,15 +98,15 @@ Commande reçue par l'ESP32 :
 ```
 ## Membres de l'équipe (GP5)
 
-**Amaury Sanchez**- Frontend
-**Christopher De Pasqual**- Bridge
-**Stéphane Descarpentrie**- ESP-32 / Montage Hardware
-**Adrien Allard**- ESP-32 / Montage Hardware
+- **Amaury Sanchez** - Frontend
+- **Christopher De Pasqual** - Bridge
+- **Stéphane Descarpentrie** - ESP-32 / Montage Hardware
+- **Adrien Allard** - ESP-32 / Montage Hardware
 
 ### Roussources
 
-[Montage Wokwi](docs/montage_wokwi.png)
-[ESP32](docs/esp32.jpg)
-[Board](docs/board.jpg)
-[Montage Hardware](docs/montage_hardware.jpg)
-[Hardware](docs/hardware.jpg)
+- [Montage Wokwi](docs/montage_wokwi.png)
+- [ESP32](docs/esp32.jpg)
+- [Board](docs/board.jpg)
+- [Montage Hardware](docs/montage_hardware.jpg)
+- [Hardware](docs/hardware.jpg)

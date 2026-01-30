@@ -1,0 +1,19 @@
+.env
+node_modules/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# SvelteKit / Vite
+front/.svelte-kit/
+front/.vite/
+front/build/
+front/dist/
+front/node_modules/
+
+# Bridge
+bridge/node_modules/

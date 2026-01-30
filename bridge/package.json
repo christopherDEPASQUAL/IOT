@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "mqtt": "^5.14.1",
+    "node": "^25.5.0",
+    "ws": "^8.19.0"
+  }
+}

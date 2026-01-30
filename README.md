@@ -86,10 +86,11 @@ Commande reçue par l'ESP32 :
 ```
 ## Membres de l'équipe (GP5)
 
-    **Amaury Sanchez**- Frontend
-    **Christopher De Pasqual**- Bridge
-    **Stéphane Descarpentrie**- ESP-32 / Montage Hardware
-    **Adrien Allard**- ESP-32 / Montage Hardware
+**Amaury Sanchez**- Frontend
+**Christopher De Pasqual**- Bridge
+**Stéphane Descarpentrie**- ESP-32 / Montage Hardware
+**Adrien Allard**- ESP-32 / Montage Hardware
+
 ### Roussources
 
 [Montage Wokwi](docs/montage_wokwi.png)
